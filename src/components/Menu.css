@@ -1,0 +1,81 @@
+.menu-section {
+  background-color: rgba(28, 28, 30, 0.8);
+  position: relative;
+}
+
+.flavors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.flavor-card {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flavor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(174, 228, 255, 0.4);
+}
+
+.flavor-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.flavor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.flavor-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(28, 28, 30, 0.8));
+}
+
+.flavor-card:hover .flavor-image {
+  transform: scale(1.05);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.flavor-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flavor-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ice-blue);
+}
+
+.flavor-content p {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.flavor-content .frost-button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .flavors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

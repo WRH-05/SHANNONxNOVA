@@ -1,0 +1,119 @@
+.promise-section {
+  background-color: rgba(28, 28, 30, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.promise-content {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.lich-king-image {
+  flex: 0 0 30%;
+  padding-right: 2rem;
+}
+
+.promise-text {
+  flex: 1;
+}
+
+.promise-text h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+  font-size: 2.5rem;
+  color: var(--ice-blue);
+  position: absolute;
+  opacity: 0.7;
+}
+
+.quote::before {
+  top: -10px;
+  left: 0;
+}
+
+.quote::after {
+  bottom: -30px;
+  right: 0;
+}
+
+.signature {
+  text-align: right;
+  font-size: 1.1rem;
+  color: var(--ice-blue);
+  font-weight: 600;
+}
+
+/* Snowflake animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--ice-blue);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: snowfall linear infinite;
+}
+
+@media (max-width: 768px) {
+  .promise-content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .lich-king-image {
+    flex: 0 0 auto;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+}
+

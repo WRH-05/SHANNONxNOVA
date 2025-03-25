@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --dark: #1c1c1e;
+  --light: #f8f8f8;
+  --ice-blue: #aee4ff;
+  --ice-blue-transparent: rgba(174, 228, 255, 0.1);
+  --ice-blue-glow: 0 0 10px rgba(174, 228, 255, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Cinzel", serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  background-image: linear-gradient(rgba(28, 28, 30, 0.9), rgba(28, 28, 30, 0.9));
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(174, 228, 255, 0.05));
+  pointer-events: none;
+  z-index: -1;
+}
+
