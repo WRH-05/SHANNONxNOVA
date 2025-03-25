@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--dark);
+  position: relative;
+  border-top: 1px solid rgba(174, 228, 255, 0.3);
+  padding-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+}
+
+.footer-logo h3 {
+  font-size: 1.5rem;
+  color: var(--ice-blue);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 2 1 600px;
+}
+
+.footer-column {
+  flex: 1 1 150px;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--light);
+  position: relative;
+  display: inline-block;
+}
+
+.footer-column h4::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--ice-blue);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+  color: var(--light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-column a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--ice-blue);
+  transition: all 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--ice-blue);
+  text-shadow: 0 0 5px rgba(174, 228, 255, 0.3);
+}
+
+.footer-column a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(174, 228, 255, 0.1);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: var(--light);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.lich-king-quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ice-blue);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
