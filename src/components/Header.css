@@ -38,6 +38,7 @@
   margin: 0;
   color: var(--ice-blue);
   text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  font-family: var(--title-font);
 }
 
 nav ul {
@@ -58,6 +59,7 @@ nav a {
   letter-spacing: 1px;
   transition: all 0.3s ease;
   position: relative;
+  font-family: var(--title-font);
 }
 
 nav a::after {
@@ -116,6 +118,7 @@ nav a:hover::after {
   text-transform: uppercase;
   color: var(--light);
   text-shadow: 0 0 15px var(--ice-blue);
+  font-family: var(--title-font);
 }
 
 .sub-tagline {
@@ -123,6 +126,7 @@ nav a:hover::after {
   margin-bottom: 2rem;
   color: var(--ice-blue);
   text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  font-family: var(--body-font);
 }
 
 .icicles {

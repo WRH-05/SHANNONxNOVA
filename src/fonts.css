@@ -1,0 +1,15 @@
+/* Instead of using local font files that don't exist, let's use Google Fonts */
+/* This will remove the errors related to missing font files */
+
+/* We'll use Cinzel as a replacement for VAMPIRE WARS */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+/* We'll use Open Sans as a replacement for ICE KINGDOM */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
+/* Define our custom font variables */
+:root {
+  --title-font: "Cinzel", serif;
+  --body-font: "Open Sans", sans-serif;
+}
+

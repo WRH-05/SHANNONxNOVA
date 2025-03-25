@@ -10,7 +10,7 @@ function PlaceholderImage({ width = 300, height = 200, text = "Placeholder Image
         alignItems: "center",
         justifyContent: "center",
         color: "#aee4ff",
-        fontFamily: "Cinzel, serif",
+        fontFamily: "var(--title-font)",
         textAlign: "center",
         padding: "10px",
         boxShadow: "0 0 10px rgba(174, 228, 255, 0.3)",

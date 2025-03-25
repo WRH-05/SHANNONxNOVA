@@ -1,3 +1,44 @@
+:root {
+  --dark: #1c1c1e;
+  --light: #f8f8f8;
+  --ice-blue: #aee4ff;
+  --ice-blue-transparent: rgba(174, 228, 255, 0.1);
+  --ice-blue-glow: 0 0 10px rgba(174, 228, 255, 0.5);
+  /* Use the variables defined in fonts.css */
+  --title-font: "Cinzel", serif;
+  --body-font: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  background-image: linear-gradient(rgba(28, 28, 30, 0.9), rgba(28, 28, 30, 0.9));
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(174, 228, 255, 0.05));
+  pointer-events: none;
+  z-index: -1;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -6,22 +47,6 @@
 
 main {
   flex: 1;
-}
-
-section {
-  padding: 5rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ice-blue), transparent);
 }
 
 .container {
@@ -34,34 +59,17 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Cinzel", serif;
+  font-family: var(--title-font);
   font-weight: 700;
   color: var(--light);
   text-shadow: 0 0 5px var(--ice-blue);
   letter-spacing: 1px;
 }
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--ice-blue), transparent);
-}
-
 p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
+  font-family: var(--body-font);
 }
 
 .frost-border {
@@ -76,7 +84,7 @@ p {
   color: var(--ice-blue);
   border: 2px solid var(--ice-blue);
   padding: 0.8rem 2rem;
-  font-family: "Cinzel", serif;
+  font-family: var(--title-font);
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -109,18 +117,6 @@ p {
   left: 100%;
 }
 
-.section-title-container {
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.section-title {
-  display: inline-block;
-  position: relative;
-  padding: 0 2rem;
-}
-
 .frost-mist {
   position: absolute;
   bottom: 0;
@@ -129,16 +125,6 @@ p {
   height: 100px;
   background: linear-gradient(to top, rgba(174, 228, 255, 0.1), transparent);
   pointer-events: none;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 3rem 1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
 }
 
 /* Icicle animation */

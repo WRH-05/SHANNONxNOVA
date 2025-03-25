@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
+import "./fonts.css"
 import App from "./App"
 
 // Wait for DOM to be fully loaded before rendering
