@@ -1,6 +1,6 @@
 // TransitionBand.jsx
 import React, { useEffect, useState, useMemo } from 'react';
-import './TransitionBand.css';
+import './separation-band.css';
 
 const TransitionBand = () => {
   // Track scroll position if you want to shrink/fade images on scroll

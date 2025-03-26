@@ -1,15 +1,14 @@
 // src/pages/InfiniteIceCreamScroll.jsx
 import React from 'react';
-import './infinitescroll/.css';
+import './infinitescroll.css';
 
 const images = [
-  '/SHANNONxNOVA/src/assets/photos/sword.png',
-  '/SHANNONxNOVA/src/assets/photos/swirl.png',
-  '/SHANNONxNOVA/src/assets/photos/sorbet.png',
+  '/assets/photos/sword.png',
+  '/assets/photos/swirl.png',
+  '/assets/photos/sorbet.png',
 ];
 
 const InfiniteIceCreamScroll = () => {
-  // Duplicate images for seamless scrolling
   const repeatedImages = [...images, ...images];
 
   return (

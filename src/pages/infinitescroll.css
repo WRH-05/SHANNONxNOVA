@@ -1,33 +1,26 @@
-
-
-/* Wrap the scrolling area in a smaller container */
 .infinite-scroll-container {
-    overflow: hidden;
-    width: 400px;      /* Set your desired width */
-    margin: 0 auto;    /* Centers the container horizontally */
-    border: 1px solid rgba(174, 228, 255, 0.3); /* Optional: for visual emphasis */
-    padding: 10px;     /* Optional padding around the scrolling content */
+  overflow: hidden;
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid rgba(174, 228, 255, 0.3);
+  padding: 10px;
+}
+
+.infinite-scroll-content {
+  display: flex;
+  animation: scroll-left 10s linear infinite;
+}
+
+.icecream-image {
+  width: 100px;
+  margin-right: 10px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Content that will be animated */
-  .infinite-scroll-content {
-    display: flex;
-    animation: scroll-left 10s linear infinite;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  /* Style for each image */
-  .icecream-image {
-    width: 100px;       /* Adjust size as needed to fit within your container */
-    margin-right: 10px; /* Spacing between images */
-  }
-  
-  /* Keyframes for scrolling the images to the left */
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
+}
