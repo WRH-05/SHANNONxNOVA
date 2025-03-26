@@ -20,7 +20,6 @@ function Promise() {
         </div>
       </div>
 
-      {/* Animated snowflakes */}
       <div className="snowflakes">
         {[...Array(20)].map((_, i) => (
           <div

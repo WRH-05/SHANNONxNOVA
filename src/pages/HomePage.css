@@ -13,6 +13,9 @@
   position: relative;
   background-color: var(--dark);
   overflow: hidden;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/king1-4XccajWOpT0cXzmrDqAV6Msg8g9B3j.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section::before {

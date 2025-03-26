@@ -1,12 +1,17 @@
 import "./HomePage.css"
+import CallToAction from "../components/CallToAction"
+import Gallery from "../components/Gallery"
+import LoyaltyProgram from "../components/LoyaltyProgram"
+import Testimonials from "../components/Testimonials"
+import Promise from "../components/Promise"
 
 function HomePage() {
   return (
     <div className="home-page">
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">The Frozen Throne of Flavor</h1>
-          <p className="hero-subtitle">A frozen wasteland of beauty and terror</p>
+          <h1 className="hero-title">THE LICH KING'S VISION</h1>
+          <p className="hero-subtitle">THIS IS NO ORDINARY ICE-CREAM IT IS A CONQUEST OF TASTE, FORGED IN THE COLDEST DEPTHS OF NORTHREND</p>
           <button className="frost-button">Taste the Chill</button>
         </div>
         <div className="frost-mist"></div>
@@ -50,6 +55,12 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <CallToAction />
+      <Gallery />
+      <LoyaltyProgram />
+      <Testimonials />
+      <Promise />
     </div>
   )
 }

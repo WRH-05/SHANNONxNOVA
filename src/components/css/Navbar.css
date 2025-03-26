@@ -85,7 +85,7 @@ nav a:hover::after {
 .register-btn {
   background-color: rgba(174, 228, 255, 0.1);
   padding: 0.5rem 1.2rem;
-  border-radius: 3px;
+  border-radius: 50px; /* Updated border-radius for a more rounded look */
   border: 1px solid var(--ice-blue);
   box-shadow: 0 0 10px rgba(174, 228, 255, 0.3);
 }

@@ -8,39 +8,16 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const galleryImages = [
-    {
-      id: 1,
-      title: "Frostmourne Swirl Cone",
-    },
-    {
-      id: 2,
-      title: "Plagueberry Sundae",
-    },
-    {
-      id: 3,
-      title: "Arctic Oblivion Bowl",
-    },
-    {
-      id: 4,
-      title: "Necrotic Nuts Milkshake",
-    },
-    {
-      id: 5,
-      title: "Frozen Throne Special",
-    },
-    {
-      id: 6,
-      title: "Death Knight Delight",
-    },
+    { id: 1, title: "Frostmourne Swirl Cone" },
+    { id: 2, title: "Plagueberry Sundae" },
+    { id: 3, title: "Arctic Oblivion Bowl" },
+    { id: 4, title: "Necrotic Nuts Milkshake" },
+    { id: 5, title: "Frozen Throne Special" },
+    { id: 6, title: "Death Knight Delight" },
   ]
 
-  const openModal = (image) => {
-    setSelectedImage(image)
-  }
-
-  const closeModal = () => {
-    setSelectedImage(null)
-  }
+  const openModal = (image) => setSelectedImage(image)
+  const closeModal = () => setSelectedImage(null)
 
   return (
     <section id="gallery" className="gallery-section">

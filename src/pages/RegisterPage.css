@@ -28,9 +28,9 @@
 
 .register-container {
   display: flex;
-  flex-direction: row-reverse; /* Flip the layout */
+  flex-direction: row-reverse; /* Reverse the order to place the image on the left */
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Full screen height */
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -42,9 +42,9 @@
 }
 
 .register-image-side {
-  flex: 1;
+  flex: 1; /* Occupy one-third of the screen */
   background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/skull-rVCA3JVqUpgPevTfBj8QZEsTTwPHVc.png");
-  background-size: contain; /* Ensure the image is centered and doesn't overflow */
+  background-size: cover; /* Ensure the image fills its section */
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -75,7 +75,7 @@
 }
 
 .register-form-side {
-  flex: 1;
+  flex: 2; /* Occupy two-thirds of the screen */
   display: flex;
   justify-content: center;
   align-items: center;
