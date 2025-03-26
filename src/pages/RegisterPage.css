@@ -283,27 +283,33 @@
 
 .snowflake {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 5px; /* Smaller snowflakes */
+  height: 5px;
   background-color: var(--ice-blue);
   border-radius: 50%;
-  opacity: 0.7;
+  opacity: 0.5; /* More subtle opacity */
   animation: snowfall linear infinite;
 }
 
 @keyframes snowfall {
   0% {
-    transform: translateY(-100px) rotate(0deg);
+    transform: translateY(-100px) translateX(0) rotate(0deg);
     opacity: 0;
   }
-  10% {
+  25% {
+    transform: translateY(25vh) translateX(-10px) rotate(45deg);
     opacity: 0.8;
   }
-  90% {
-    opacity: 0.7;
+  50% {
+    transform: translateY(50vh) translateX(10px) rotate(90deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(75vh) translateX(-15px) rotate(135deg);
+    opacity: 0.4;
   }
   100% {
-    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    transform: translateY(100vh) translateX(20px) rotate(360deg);
     opacity: 0;
   }
 }

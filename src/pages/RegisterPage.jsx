@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "./RegisterPage.css"
+import group16 from "../assets/photos/group16.png"; // Import the image
 
 function RegisterPage() {
   const [isLogin, setIsLogin] = useState(true)
@@ -42,7 +43,7 @@ function RegisterPage() {
       <div className="success-page">
         <div className="success-content">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/group16.png"
+            src={group16} // Use the imported image
             alt="Thank You"
             className="success-image"
           />
