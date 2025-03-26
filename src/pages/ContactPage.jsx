@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./ContactPage.css"
 
 function ContactPage() {
@@ -9,6 +9,12 @@ function ContactPage() {
     email: "",
     message: "",
   })
+
+  const [fadeIn, setFadeIn] = useState(false)
+
+  useEffect(() => {
+    setFadeIn(true)
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -32,11 +38,13 @@ function ContactPage() {
 
   return (
     <div className="contact-page">
+      <div className="contact-background"></div>
+
       <div className="page-header">
         <h1>Contact The Frozen Throne</h1>
       </div>
 
-      <div className="container">
+      <div className={`container ${fadeIn ? "fade-in" : ""}`}>
         <div className="contact-content">
           <div className="contact-info frost-border">
             <h3>Approach with Caution</h3>
@@ -73,12 +81,28 @@ function ContactPage() {
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="frost-input"
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="frost-input"
+                />
               </div>
 
               <div className="form-group">
@@ -90,6 +114,7 @@ function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  className="frost-input"
                 ></textarea>
               </div>
 
@@ -102,6 +127,19 @@ function ContactPage() {
       </div>
 
       <div className="frost-mist"></div>
+      <div className="icicles">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="icicle"
+            style={{
+              left: `${i * 7 + Math.random() * 5}%`,
+              height: `${20 + Math.random() * 30}px`,
+              animationDelay: `${Math.random() * 2}s`,
+            }}
+          />
+        ))}
+      </div>
     </div>
   )
 }

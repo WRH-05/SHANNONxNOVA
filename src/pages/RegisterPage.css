@@ -1,65 +1,110 @@
 .register-page {
-  padding-top: 80px;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   position: relative;
-  background-color: rgba(28, 28, 30, 0.9);
+  background-color: var(--dark);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.register-logo img {
+  height: 60px;
+  filter: drop-shadow(0 0 10px rgba(174, 228, 255, 0.5));
+  transition: all 0.3s ease;
+}
+
+.register-logo img:hover {
+  filter: drop-shadow(0 0 15px rgba(174, 228, 255, 0.8));
+  transform: scale(1.05);
 }
 
 .register-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row-reverse; /* Flip the layout */
   width: 100%;
-  max-width: 1000px;
-  height: 600px;
-  margin: 2rem;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(174, 228, 255, 0.3);
-  border-radius: 5px;
+  height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.register-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .register-image-side {
-  background-image: url("https://via.placeholder.com/500x600");
-  background-size: cover;
+  flex: 1;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/skull-rVCA3JVqUpgPevTfBj8QZEsTTwPHVc.png");
+  background-size: contain; /* Ensure the image is centered and doesn't overflow */
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
-}
-
-.register-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(28, 28, 30, 0.8), rgba(28, 28, 30, 0.4));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  color: var(--light);
   text-align: center;
+  padding: 2rem;
 }
 
-.register-overlay h2 {
-  color: var(--ice-blue);
-  font-size: 2rem;
-  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+.register-image-content {
+  position: relative;
+  z-index: 2;
+}
+
+.register-image-side h1 {
+  font-size: 4rem;
   margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(174, 228, 255, 0.8);
+  animation: pulse 3s infinite alternate;
+}
+
+.register-image-side h2 {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
 }
 
 .register-form-side {
-  padding: 3rem;
+  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(28, 28, 30, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-content {
+  width: 80%;
+  max-width: 500px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .register-form-side h2 {
-  text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--ice-blue);
+  text-align: center;
+  text-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
+}
+
+.form-subtitle {
+  text-align: center;
+  color: var(--ice-blue);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .form-group {
@@ -71,11 +116,13 @@
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.form-group input {
+.frost-input {
   width: 100%;
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: rgba(28, 28, 30, 0.5);
   border: 1px solid rgba(174, 228, 255, 0.3);
   border-radius: 3px;
@@ -84,14 +131,21 @@
   transition: all 0.3s ease;
 }
 
-.form-group input:focus {
+.frost-input:focus {
   outline: none;
   border-color: var(--ice-blue);
-  box-shadow: 0 0 10px rgba(174, 228, 255, 0.3);
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.4);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .google-signin {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -100,13 +154,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: var(--light);
   color: var(--dark);
   border: none;
   border-radius: 3px;
   font-family: inherit;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -151,36 +206,145 @@
 }
 
 /* Success page */
-.success-container {
+.success-page {
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 3rem;
-  max-width: 600px;
-  margin: 0 auto;
+  align-items: center;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/king3-0o1SreyU6BrsnD4491QRBmO4rjeaey.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.success-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(28, 28, 30, 0.5), rgba(28, 28, 30, 0.9));
+}
+
+.success-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.success-message {
+  padding: 3rem;
+}
+
+.success-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--ice-blue);
+  text-shadow: 0 0 20px rgba(174, 228, 255, 0.8);
+}
+
+.success-message h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+}
+
+.success-message .frost-button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.bubble-button {
+  border-radius: 50px; /* Make the button more rounded */
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
 }
 
 .success-image {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   margin-bottom: 2rem;
-  filter: drop-shadow(0 0 15px rgba(174, 228, 255, 0.5));
 }
 
-@media (max-width: 768px) {
+/* Snowfall animation */
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--ice-blue);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(174, 228, 255, 0.9), 0 0 40px rgba(174, 228, 255, 0.7);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
   .register-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     height: auto;
+    min-height: 100vh;
   }
 
   .register-image-side {
-    display: none;
+    height: 40vh;
+  }
+
+  .register-image-side h1 {
+    font-size: 3rem;
   }
 
   .register-form-side {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 }
 

@@ -6,23 +6,53 @@
   overflow: hidden;
 }
 
+.about-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image21-gxzxgfQ3h4WOgq86G1YO3ntsU0dyeW.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 0;
+}
+
 .page-header {
   text-align: center;
   padding: 3rem 0;
   position: relative;
+  z-index: 1;
 }
 
 .page-header h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--ice-blue);
-  text-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
+  text-shadow: 0 0 20px rgba(174, 228, 255, 0.7);
   text-transform: uppercase;
+  animation: glow 3s infinite alternate;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-content {
   padding: 3rem;
   margin-bottom: 3rem;
   position: relative;
+  background-color: rgba(28, 28, 30, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .about-section {
@@ -34,11 +64,12 @@
 }
 
 .about-section h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--ice-blue);
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
 }
 
 .about-section h2::after {
@@ -55,6 +86,7 @@
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   line-height: 1.6;
+  color: var(--light);
 }
 
 /* Snowflake animation */
@@ -93,6 +125,15 @@
   border-radius: 50%;
   opacity: 0.7;
   animation: snowfall linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(174, 228, 255, 0.8), 0 0 30px rgba(174, 228, 255, 0.6);
+  }
 }
 
 @media (max-width: 768px) {

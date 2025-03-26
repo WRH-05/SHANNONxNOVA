@@ -1,13 +1,24 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import "./AboutPage.css"
 
 function AboutPage() {
+  const [fadeIn, setFadeIn] = useState(false)
+
+  useEffect(() => {
+    setFadeIn(true)
+  }, [])
+
   return (
     <div className="about-page">
+      <div className="about-background"></div>
+
       <div className="page-header">
         <h1>About The Frozen Throne</h1>
       </div>
 
-      <div className="container">
+      <div className={`container ${fadeIn ? "fade-in" : ""}`}>
         <div className="about-content frost-border">
           <div className="about-section">
             <h2>Our Frozen Legacy</h2>
