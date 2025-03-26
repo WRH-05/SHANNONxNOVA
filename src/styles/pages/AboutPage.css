@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image21-gxzxgfQ3h4WOgq86G1YO3ntsU0dyeW.png");
+  background-image: url("../../assets/photos/king1.webp"); /* Corrected path */
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -53,6 +53,7 @@
   position: relative;
   background-color: rgba(28, 28, 30, 0.7);
   backdrop-filter: blur(5px);
+  border-radius: 10px; /* Updated to match the contact page */
 }
 
 .about-section {
@@ -89,42 +90,12 @@
   color: var(--light);
 }
 
-/* Snowflake animation */
-@keyframes snowfall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(calc(100vh + 100px)) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.snowflakes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.snowflake {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: var(--ice-blue);
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: snowfall linear infinite;
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--ice-blue);
+  margin: 1.5rem 0;
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
 }
 
 @keyframes glow {

@@ -59,7 +59,7 @@
   padding: 0.8rem;
   background-color: rgba(28, 28, 30, 0.5);
   border: 1px solid rgba(174, 228, 255, 0.3);
-  border-radius: 3px;
+  border-radius: 10px; /* Updated to match input boxes in the contact page */
   color: var(--light);
   font-family: inherit;
   margin-right: 1rem;

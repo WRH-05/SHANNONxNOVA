@@ -23,53 +23,34 @@ function AboutPage() {
           <div className="about-section">
             <h2>Our Frozen Legacy</h2>
             <p>
-              The website shall be a frozen wasteland of beauty and terror. Our domain is a realm of icy blues, bone
-              whites, and shadowy blacks. The design evokes the frozen throne itself, with frost-covered edges,
-              shimmering icicles, and a faint mist rolling across the screen.
+              Welcome to the Frozen Throne of Flavor, where every scoop is a masterpiece forged in the icy depths of Northrend. Our mission is to deliver an unparalleled ice cream experience that combines the chilling essence of frost with the warmth of indulgence.
             </p>
             <p>
-              Every visitor shall feel the chill of our domain. Our ice cream is crafted with the power of frost and
-              shadow, designed to bring an otherworldly experience to your taste buds.
+              From the shimmering icicles to the frosty mist that greets you, every element of our design is crafted to immerse you in the Lich King's domain. Our flavors are as unique as the Frozen Throne itself, offering a taste of the extraordinary.
             </p>
           </div>
 
           <div className="about-section">
             <h2>The Lich King's Vision</h2>
-            <p>
-              "You will kneel before my frozen creations. Each scoop is a masterpiece, crafted with the power of ice and
-              death. Resistance is futile—indulgence is eternal."
-            </p>
+            <blockquote>
+              "You will kneel before my frozen creations. Each scoop is a masterpiece, crafted with the power of ice and death. Resistance is futile—indulgence is eternal."
+            </blockquote>
             <p>- The Lich King, Master of Frost</p>
           </div>
 
           <div className="about-section">
             <h2>Our Commitment</h2>
             <p>
-              We are committed to providing the most chilling ice cream experience in the realm. Our flavors are crafted
-              with precision and dark magic, ensuring that each bite sends shivers down your spine.
+              We are dedicated to crafting ice cream that not only satisfies your taste buds but also transports you to a realm of frost and shadow. Our commitment to quality and creativity ensures that every bite is a journey into the extraordinary.
             </p>
             <p>
-              Join our Frostmourne Loyalty Program and earn points with every purchase. Unlock rewards like free
-              toppings, exclusive flavors, and a chance to sit upon the Frozen Throne (figuratively).
+              Join our Frostmourne Loyalty Program to earn rewards, unlock exclusive flavors, and become a part of the Frozen Legion. Together, we shall conquer the realm of flavor.
             </p>
           </div>
         </div>
       </div>
 
       <div className="frost-mist"></div>
-      <div className="snowflakes">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="snowflake"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${10 + Math.random() * 10}s`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
     </div>
   )
 }

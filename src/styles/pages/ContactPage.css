@@ -79,13 +79,16 @@
 
 .info-item {
   display: flex;
-  margin-bottom: 1.5rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(174, 228, 255, 0.2);
+  border: 1px solid rgba(174, 228, 255, 0.5);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,5 +192,85 @@
   .page-header h1 {
     font-size: 2.2rem;
   }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form-container {
+  padding: 2.5rem;
+  background: rgba(28, 28, 30, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(174, 228, 255, 0.3);
+}
+
+.contact-form label {
+  font-size: 1.2rem;
+  color: var(--ice-blue);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(28, 28, 30, 0.6);
+  border: 1px solid rgba(174, 228, 255, 0.3);
+  padding: 1rem;
+  border-radius: 10px; /* Updated for more rounded corners */
+  color: var(--light);
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--ice-blue);
+  box-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: var(--ice-blue);
+  color: var(--dark);
+  border: none;
+  border-radius: 50px; /* Updated to match other pages */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: rgba(174, 228, 255, 0.8);
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
+}
+
+.location-icon::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--ice-blue);
+  mask: url("../../assets/icons/location.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/location.svg") center / contain no-repeat;
+}
+
+.phone-icon::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--ice-blue);
+  mask: url("../../assets/icons/phone.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/phone.svg") center / contain no-repeat;
+}
+
+.email-icon::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--ice-blue);
+  mask: url("../../assets/icons/email.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/email.svg") center / contain no-repeat;
 }
 

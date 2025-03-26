@@ -26,7 +26,6 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // In a real application, you would send this data to a server
     console.log("Form submitted:", formData)
     alert("Your message has been received by the Lich King. Prepare for a frozen response.")
     setFormData({
@@ -51,7 +50,7 @@ function ContactPage() {
             <p className="warning">The Lich King is always watching.</p>
 
             <div className="info-item">
-              <div className="icon location-icon">📍</div>
+              <div className="icon location-icon"></div>
               <div>
                 <h4>Frozen Throne Ice Cream Parlor</h4>
                 <p>Icecrown Citadel, Northrend</p>
@@ -60,7 +59,7 @@ function ContactPage() {
             </div>
 
             <div className="info-item">
-              <div className="icon phone-icon">📞</div>
+              <div className="icon phone-icon"></div>
               <div>
                 <h4>Phone</h4>
                 <p>(555) ICE-KING</p>
@@ -68,7 +67,7 @@ function ContactPage() {
             </div>
 
             <div className="info-item">
-              <div className="icon email-icon">✉️</div>
+              <div className="icon email-icon"></div>
               <div>
                 <h4>Email</h4>
                 <p>lichking@frozenthrone.ice</p>
@@ -127,19 +126,6 @@ function ContactPage() {
       </div>
 
       <div className="frost-mist"></div>
-      <div className="icicles">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="icicle"
-            style={{
-              left: `${i * 7 + Math.random() * 5}%`,
-              height: `${20 + Math.random() * 30}px`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
     </div>
   )
 }
