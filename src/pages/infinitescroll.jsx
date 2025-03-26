@@ -1,28 +1,42 @@
 // src/pages/InfiniteIceCreamScroll.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import './infinitescroll.css';
 
 const images = [
-  '/assets/photos/sword.png',
-  '/assets/photos/swirl.png',
-  '/assets/photos/sorbet.png',
+  '/src/assets/photos/brownhand.png',
+  '/src/assets/photos/purplehand.png',
+  '/src/assets/photos/pinkhand.png',
 ];
 
 const InfiniteIceCreamScroll = () => {
-  const repeatedImages = [...images, ...images];
+  const [expandedImage, setExpandedImage] = useState(null);
+
+  const handleImageClick = (src) => {
+    setExpandedImage(src);
+  };
+
+  const handleCloseClick = () => {
+    setExpandedImage(null);
+  };
 
   return (
-    <div className="infinite-scroll-container">
-      <div className="infinite-scroll-content">
-        {repeatedImages.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Ice Cream ${index + 1}`}
-            className="icecream-image"
-          />
+    <div className="image-gallery-container">
+      <div className="image-gallery-content">
+        {images.map((src, index) => (
+          <div key={index} className="image-wrapper" onClick={() => handleImageClick(src)}>
+            <img
+              src={src}
+              alt={`Ice Cream ${index + 1}`}
+              className="icecream-image"
+            />
+          </div>
         ))}
       </div>
+      {expandedImage && (
+        <div className="expanded-image-container" onClick={handleCloseClick}>
+          <img src={expandedImage} alt="Expanded Ice Cream" className="expanded-image" />
+        </div>
+      )}
     </div>
   );
 };

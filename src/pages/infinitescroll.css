@@ -1,26 +1,71 @@
 .infinite-scroll-container {
-  overflow: hidden;
+  overflow-x: auto;
   width: 100%;
   margin: 0 auto;
   border: 1px solid rgba(174, 228, 255, 0.3);
   padding: 10px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  scrollbar-width: none; /* Firefox */
+}
+
+.infinite-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .infinite-scroll-content {
   display: flex;
-  animation: scroll-left 10s linear infinite;
+  justify-content: center;
+}
+
+.image-gallery-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-gallery-content {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
 }
 
 .icecream-image {
   width: 100px;
-  margin-right: 10px;
+  height: 100px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.expanded-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid rgba(174, 228, 255, 0.3);
+  box-shadow: 0 0 25px rgba(174, 228, 255, 0.4);
 }
