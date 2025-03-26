@@ -1,4 +1,4 @@
-import "./CallToAction.css"
+import "./css/CallToAction.css"
 
 function CallToAction() {
   return (

@@ -1,4 +1,4 @@
-import "./Menu.css"
+import "./css/Menu.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Menu() {

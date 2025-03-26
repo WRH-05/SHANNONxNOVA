@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import "./Contact.css"
+import "./css/Contact.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Contact() {

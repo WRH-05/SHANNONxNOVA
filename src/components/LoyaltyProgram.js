@@ -1,4 +1,4 @@
-import "./LoyaltyProgram.css"
+import "./css/LoyaltyProgram.css"
 
 function LoyaltyProgram() {
   const rewards = [

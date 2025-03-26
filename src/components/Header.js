@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import "./Header.css"
+import "./css/Header.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Header() {

@@ -1,4 +1,4 @@
-import "./Testimonials.css"
+import "./css/Testimonials.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Testimonials() {
