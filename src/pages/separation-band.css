@@ -1,0 +1,39 @@
+/* TransitionBand.css */
+
+.transition-band {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    background: #86b9e3; 
+    overflow: hidden; 
+}
+
+  /* Center the text content */
+.band-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2; 
+}
+.band-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.band-content p {
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.band-icecream {
+    position: absolute;
+    width: 80px; /* Adjust size as needed */
+    transition: transform 0.2s, opacity 0.2s;
+    z-index: 1; /* Below the text content */
+}
