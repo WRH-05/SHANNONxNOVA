@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import "./ContactPage.css"
+import "../styles/pages/ContactPage.css" // Corrected path
 
 function ContactPage() {
   const [formData, setFormData] = useState({

@@ -1,4 +1,4 @@
-import "./HomePage.css"
+import "../styles/pages/HomePage.css" // Corrected path
 import CallToAction from "../components/CallToAction"
 import Gallery from "../components/Gallery"
 import LoyaltyProgram from "../components/LoyaltyProgram"

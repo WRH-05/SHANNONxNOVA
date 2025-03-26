@@ -1,7 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
-import "./fonts.css"
+import "./styles/fonts.css" // Corrected path
+import "./styles/scrollbar.css" // Corrected path
 import App from "./App"
 
 // Wait for DOM to be fully loaded before rendering

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import "./css/Navbar.css"
+import "../styles/components/Navbar.css" // Corrected path
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)

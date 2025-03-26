@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import "./AboutPage.css"
+import "../styles/pages/AboutPage.css" // Corrected path
 
 function AboutPage() {
   const [fadeIn, setFadeIn] = useState(false)

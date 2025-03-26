@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import "./RegisterPage.css"
+import "../styles/pages/RegisterPage.css" // Corrected path
 import group16 from "../assets/photos/group16.png"; // Import the image
 
 function RegisterPage() {

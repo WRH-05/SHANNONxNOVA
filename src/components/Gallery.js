@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import "./css/Gallery.css"
+import "../styles/components/Gallery.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Gallery() {

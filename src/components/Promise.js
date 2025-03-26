@@ -1,4 +1,4 @@
-import "./css/Promise.css"
+import "../styles/components/Promise.css"
 import PlaceholderImage from "./PlaceholderImage"
 
 function Promise() {
