@@ -231,20 +231,42 @@
 }
 
 .contact-form button {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  background: var(--ice-blue);
-  color: var(--dark);
-  border: none;
-  border-radius: 50px; /* Updated to match other pages */
+  background-color: transparent;
+  color: var(--ice-blue);
+  border: 2px solid var(--ice-blue);
+  padding: 0.8rem 2rem;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--ice-blue-glow);
+  border-radius: 50px;
 }
 
 .contact-form button:hover {
-  background: rgba(174, 228, 255, 0.8);
-  box-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
+  background-color: var(--ice-blue-transparent);
+  box-shadow: 0 0 20px rgba(174, 228, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.contact-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(174, 228, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.contact-form button:hover::before {
+  left: 100%;
 }
 
 .location-icon::before {

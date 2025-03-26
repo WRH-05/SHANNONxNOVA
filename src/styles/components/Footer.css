@@ -2,6 +2,7 @@
   background-color: var(--dark);
   position: relative;
   overflow: hidden;
+  padding-top: 3rem;
 }
 
 .footer::before {
@@ -38,6 +39,8 @@
   color: var(--light);
   text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
   margin: 0;
+  text-transform: uppercase;
+  animation: glow 3s infinite alternate;
 }
 
 .footer-subscribe {
@@ -46,7 +49,8 @@
 
 .footer-subscribe p {
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .subscribe-form {
@@ -59,16 +63,56 @@
   padding: 0.8rem;
   background-color: rgba(28, 28, 30, 0.5);
   border: 1px solid rgba(174, 228, 255, 0.3);
-  border-radius: 10px; /* Updated to match input boxes in the contact page */
+  border-radius: 10px;
   color: var(--light);
   font-family: inherit;
   margin-right: 1rem;
+  transition: all 0.3s ease;
 }
 
 .subscribe-form input:focus {
   outline: none;
   border-color: var(--ice-blue);
   box-shadow: 0 0 10px rgba(174, 228, 255, 0.3);
+}
+
+.subscribe-form button {
+  background-color: transparent;
+  color: var(--ice-blue);
+  border: 2px solid var(--ice-blue);
+  padding: 0.8rem 2rem;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--ice-blue-glow);
+  border-radius: 50px;
+}
+
+.subscribe-form button:hover {
+  background-color: var(--ice-blue-transparent);
+  box-shadow: 0 0 20px rgba(174, 228, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.subscribe-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(174, 228, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.subscribe-form button:hover::before {
+  left: 100%;
 }
 
 .footer-divider {
@@ -89,6 +133,7 @@
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .footer-column h3::after {
@@ -120,7 +165,38 @@
 
 .footer-column a:hover {
   color: var(--ice-blue);
-  text-shadow: 0 0 5px rgba(174, 228, 255, 0.3);
+  text-shadow: 0 0 5px rgba(174, 228, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-social a {
+  color: var(--light);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--ice-blue);
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.footer-social a i {
+  font-size: 1.5rem;
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+.footer-social a i:hover {
+  color: var(--ice-blue);
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.7);
 }
 
 @media (max-width: 992px) {
@@ -145,6 +221,15 @@
   .subscribe-form input {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(174, 228, 255, 0.8), 0 0 30px rgba(174, 228, 255, 0.6);
   }
 }
 
