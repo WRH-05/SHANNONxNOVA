@@ -74,10 +74,10 @@ function Footer() {
             <h3>CONTACT</h3>
             <ul>
               <li>
-                <Link to="/contact">THELICHKING@GMAIL.COM</Link>
+                <Link to="/contact">lichking@frozenthrone.ice</Link>
               </li>
               <li>
-                <Link to="/contact">0553444182</Link>
+                <Link to="/contact">(555) ICE-KING</Link>
               </li>
               <li>
                 <Link to="/contact">ALGERIA-ALGER CENTRE</Link>
