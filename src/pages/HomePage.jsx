@@ -1,4 +1,7 @@
-import "./HomePage.css"
+import React from 'react';
+import './HomePage.css';
+import TransitionBand from './separation-band';
+import InfiniteIceCreamScroll from './infinitescroll';
 
 function HomePage() {
   return (
@@ -25,6 +28,8 @@ function HomePage() {
         </div>
       </section>
 
+      <TransitionBand />
+
       <section className="featured-section">
         <div className="container">
           <h2 className="section-title">Featured Flavors</h2>
@@ -50,8 +55,15 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="catalogue-section">
+        <div className="container">
+          <h2 className="section-title">Catalogue</h2>
+          <InfiniteIceCreamScroll />
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

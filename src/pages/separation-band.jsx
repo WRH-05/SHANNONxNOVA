@@ -1,9 +1,7 @@
-// TransitionBand.jsx
 import React, { useEffect, useState, useMemo } from 'react';
 import './separation-band.css';
 
 const TransitionBand = () => {
-  // Track scroll position if you want to shrink/fade images on scroll
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -14,37 +12,30 @@ const TransitionBand = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // List your ice cream skull images
-  const images = [
-    '/SHANNONxNOVA/src/assets/photos/oblivian.png',
-    '/SHANNONxNOVA/src/assets/photos/pinkhand.png',
-    '/SHANNONxNOVA/src/assets/photos/purplehand.png',
-    "/SHANNONxNOVA/src/assets/photos/brownhand.png"
-];
+  const totalImages = 8;
 
-  // Decide how many images you want floating in the band
-const totalImages = 8;
-
-  // Randomly pick images from the list
   const randomImages = useMemo(() => {
+    const images = [
+      '/assets/photos/oblivian.png',
+      '/assets/photos/pinkhand.png',
+      '/assets/photos/purplehand.png',
+      '/assets/photos/brownhand.png'
+    ];
     const arr = [];
     for (let i = 0; i < totalImages; i++) {
       const randIndex = Math.floor(Math.random() * images.length);
       arr.push(images[randIndex]);
     }
     return arr;
-  }, [images, totalImages]);
+  }, [totalImages]);
 
-  // Generate random positions within the band (0-90% left, 0-80% top, etc.)
   const imagePositions = useMemo(() => {
     return new Array(totalImages).fill(null).map(() => ({
-      left: Math.random() * 90, // 0% - 90%
-      top: Math.random() * 80,  // 0% - 80%
+      left: Math.random() * 90,
+      top: Math.random() * 80,
     }));
   }, [totalImages]);
 
-  // If you want them to shrink/fade with scroll, define a maxScroll
-  // so at scrollY=0 => scale=1, opacity=1, and at scrollY=400 => scale=0, opacity=0
   const maxScroll = 400;
   const scale = Math.max(1 - scrollY / maxScroll, 0);
   const opacity = Math.max(1 - scrollY / maxScroll, 0);
