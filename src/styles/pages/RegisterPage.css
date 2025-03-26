@@ -237,6 +237,10 @@
 
 .success-message {
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
 }
 
 .success-message h1 {
@@ -259,16 +263,18 @@
 }
 
 .bubble-button {
-  border-radius: 50px; /* Make the button more rounded */
+  border-radius: 50px;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
   box-shadow: 0 0 15px rgba(174, 228, 255, 0.5);
+  text-decoration: none; /* Ensure no underline */
+  text-align: center; /* Center text inside the button */
 }
 
 .success-image {
   max-width: 80%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Add spacing between the image and the button */
 }
 
 /* Snowfall animation */

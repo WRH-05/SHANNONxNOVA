@@ -42,14 +42,16 @@ function RegisterPage() {
     return (
       <div className="success-page">
         <div className="success-content">
-          <img
-            src={group16} // Use the imported image
-            alt="Thank You"
-            className="success-image"
-          />
-          <Link to="/" className="frost-button bubble-button">
-            RETURN TO THE FROZEN THRONE
-          </Link>
+          <div className="success-message">
+            <img
+              src={group16} // Keep the picture
+              alt="Success"
+              className="success-image"
+            />
+            <Link to="/" className="frost-button bubble-button">
+              RETURN TO THE FROZEN THRONE
+            </Link>
+          </div>
         </div>
       </div>
     )
