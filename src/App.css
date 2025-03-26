@@ -4,9 +4,8 @@
   --ice-blue: #aee4ff;
   --ice-blue-transparent: rgba(174, 228, 255, 0.1);
   --ice-blue-glow: 0 0 10px rgba(174, 228, 255, 0.5);
-  /* Use the variables defined in fonts.css */
-  --title-font: "Cinzel", serif;
-  --body-font: "Open Sans", sans-serif;
+  --title-font: "VAMPIRE WARS", serif;
+  --body-font: "ICE KINGDOM", sans-serif;
 }
 
 * {

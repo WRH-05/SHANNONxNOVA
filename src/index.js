@@ -19,4 +19,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error('Failed to find the root element. Make sure there is a div with id="root" in your HTML.')
   }
 })
-

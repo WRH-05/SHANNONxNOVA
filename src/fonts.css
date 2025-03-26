@@ -1,15 +1,19 @@
-/* Instead of using local font files that don't exist, let's use Google Fonts */
-/* This will remove the errors related to missing font files */
-
-/* We'll use Cinzel as a replacement for VAMPIRE WARS */
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
-
-/* We'll use Open Sans as a replacement for ICE KINGDOM */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
-
-/* Define our custom font variables */
-:root {
-  --title-font: "Cinzel", serif;
-  --body-font: "Open Sans", sans-serif;
+/* VAMPIRE WARS Font */
+@font-face {
+  font-family: "VAMPIRE WARS";
+  src: url("./assets/fonts/vampire-wars.woff2") format("woff2"),
+       url("./assets/fonts/vampire-wars.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* ICE KINGDOM Font */
+@font-face {
+  font-family: "ICE KINGDOM";
+  src: url("./assets/fonts/ice-kingdom.woff2") format("woff2"),
+       url("./assets/fonts/ice-kingdom.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -21,8 +21,7 @@
 }
 
 .register-image-side {
-  /* Replace the placeholder.svg with a gradient background */
-  background-image: linear-gradient(to right, rgba(28, 28, 30, 0.9), rgba(28, 28, 30, 0.7));
+  background-image: url("https://via.placeholder.com/500x600");
   background-size: cover;
   background-position: center;
   position: relative;
