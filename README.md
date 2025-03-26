@@ -37,7 +37,7 @@ Follow these steps to install and run the project locally.
 Clone the project to your local machine using Git:
 
 ```bash
-git clone https://github.com/your-username/lich-king-ice-cream.git
+git clone https://github.com/WRH-05/SHANNONxNOVA.git
 cd lich-king-ice-cream
 ```
 
