@@ -1,0 +1,104 @@
+.transition-band {
+  background-color: var(--ice-blue);
+  color: var(--dark);
+  text-align: center;
+  padding: 9.5rem 1rem; /* Increased top and bottom padding */
+  position: relative;
+  overflow: hidden;
+  min-height: 150%; /* Increased height to 1.5 times */
+}
+
+.catchphrase {
+  position: relative;
+  z-index: 2; /* Ensure text is above images */
+}
+
+.catchphrase h1 {
+  font-size: 2rem; /* Smaller text */
+  margin: 0 10%; /* Add left and right margins */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  text-shadow: 0 0 10px rgba(28, 28, 30, 0.5);
+  color: #1c1c1e; /* Updated color */
+}
+
+.catchphrase h2 {
+  font-size: 1.8rem; /* Subtitle */
+  font-family: var(--body-font);
+  color: #1c1c1e; /* Updated color */
+}
+
+.catchphrase p {
+  font-size: 1.2rem;
+  font-family: var(--body-font);
+}
+
+.floating-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Ensure images are below text */
+}
+
+.floating-image {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  opacity: 0.8;
+  border-radius: 15px;
+  animation: float 5s infinite ease-in-out;
+}
+
+.floating-image.left {
+  left: 10%; /* Position images on the left */
+  transform-origin: left center;
+}
+
+.floating-image.right {
+  right: 10%; /* Position images on the right */
+  transform-origin: right center;
+}
+
+.floating-image:nth-child(1) {
+  top: 10%;
+}
+
+.floating-image:nth-child(2) {
+  top: 30%;
+  right: 20%;
+}
+
+.floating-image:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.floating-image:nth-child(4) {
+  top: 70%;
+  bottom: 20%;
+  right: 30%;
+}
+
+.floating-image:nth-child(5) {
+  top: 90%;
+  bottom: 25%;
+  left: 10%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

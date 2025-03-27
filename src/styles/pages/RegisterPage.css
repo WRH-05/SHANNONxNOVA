@@ -28,7 +28,7 @@
 
 .register-container {
   display: flex;
-  flex-direction: row-reverse; /* Reverse the order to place the image on the left */
+  /*flex-direction: row-reverse;  Reverse the order to place the image on the left */
   width: 100%;
   height: 100vh; /* Full screen height */
   opacity: 0;

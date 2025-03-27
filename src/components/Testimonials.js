@@ -1,5 +1,4 @@
-import "../styles/components/Testimonials.css"
-import PlaceholderImage from "./PlaceholderImage"
+import "../styles/components/Testimonials.css";
 
 function Testimonials() {
   const testimonials = [
@@ -18,36 +17,35 @@ function Testimonials() {
       text: "One bite, and I pledged my eternal loyalty to the Frozen Throne.",
       author: "Willing Subject",
     },
-  ]
+  ];
 
   return (
     <section className="testimonials-section">
+      <div className="testimonials-overlay"></div>
       <div className="container">
         <div className="section-title-container">
-          <h2 className="section-title">Testimonials from the Damned</h2>
+          <h2 className="section-title">What Our Loyal Subjects Say</h2>
+          <p className="section-subtitle">
+            Discover why the Frozen Throne is the ultimate destination for ice cream lovers.
+          </p>
         </div>
 
         <div className="testimonials-grid">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card frost-border">
-              <div className="testimonial-content">
-                <div className="quote-icon">❝</div>
-                <p className="testimonial-text">{testimonial.text}</p>
-                <div className="testimonial-author">
-                  <PlaceholderImage width={50} height={50} text={testimonial.author.charAt(0)} />
-                  <span>{testimonial.author}</span>
-                </div>
-              </div>
-              <div className="frost-glow"></div>
+            <div key={testimonial.id} className="testimonial-card">
+              <p className="testimonial-text">"{testimonial.text}"</p>
+              <p className="testimonial-author">- {testimonial.author}</p>
             </div>
           ))}
         </div>
-      </div>
 
-      <div className="frost-mist"></div>
+        <div className="cta-container">
+          <button className="frost-button">Join the Frozen Throne</button>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Testimonials
+export default Testimonials;
 

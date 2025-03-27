@@ -60,18 +60,6 @@
   }
 }
 
-.featured-section {
-  padding: 5rem 2rem;
-  background-color: rgba(28, 28, 30, 0.9);
-}
-
-.flavors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
 .flavor-card {
   border-radius: 5px;
   overflow: hidden;
@@ -98,10 +86,6 @@
 
   .hero-subtitle {
     font-size: 1.2rem;
-  }
-
-  .flavors-grid {
-    grid-template-columns: 1fr;
   }
 }
 

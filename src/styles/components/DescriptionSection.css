@@ -1,0 +1,104 @@
+.description-section {
+  background-color: #1c1c1e;
+  padding: 16rem 1.6rem 22rem; /* Increased bottom padding by 4rem */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.description-content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  gap: 3rem;
+}
+
+.description-images {
+  position: relative; /* Ensure child elements respect positioning */
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end; /* Align images closer to the bottom */
+  z-index: 0; /* Ensure stacking context is correct */
+}
+
+.description-image {
+  position: absolute;
+  max-width: 360px; /* Increased size by 20% */
+  height: auto;
+  border-radius: 15px; /* Match the border radius used throughout the site */
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.description-image.skull {
+  top: 6rem; /* Lower the skull image */
+  left: 0;
+  z-index: 2;
+}
+
+.description-image.hand {
+  position: absolute; /* Ensure absolute positioning */
+  top: -30%; /* Raise the image significantly higher */
+  left: -50%;
+  z-index: 1; /* Ensure it stays behind the skull image */
+}
+
+.description-text {
+  flex: 1;
+  text-align: left;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 4rem; /* Reduced margin to minimize blank space */
+}
+
+.description-text h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  text-shadow: 0 0 10px rgba(174, 228, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.description-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: var(--body-font);
+}
+
+@media (max-width: 768px) {
+  .description-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description-images {
+    position: relative;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .description-image {
+    max-width: 200px;
+  }
+
+  .description-image.hand {
+    top: 20%;
+    left: 10%;
+  }
+
+  .description-text {
+    margin-top: 2rem;
+  }
+
+  .description-text h1 {
+    font-size: 2rem;
+  }
+
+  .description-text p {
+    font-size: 0.9rem;
+  }
+}

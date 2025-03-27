@@ -1,6 +1,44 @@
 .testimonials-section {
-  background-color: rgba(28, 28, 30, 0.8);
   position: relative;
+  padding: 5rem 2rem;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ice-bg.webp");
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonials-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 28, 30, 0.8);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title-container {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--ice-blue);
+  text-shadow: 0 0 15px rgba(174, 228, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--light);
+  margin-top: 0.5rem;
 }
 
 .testimonials-grid {
@@ -11,15 +49,15 @@
 
 .testimonial-card {
   padding: 2rem;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  background: rgba(28, 28, 30, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(174, 228, 255, 0.4);
+  box-shadow: 0 0 25px rgba(174, 228, 255, 0.5);
 }
 
 .testimonial-content {
@@ -37,22 +75,26 @@
 }
 
 .testimonial-text {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--light);
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  color: var(--ice-blue);
 }
 
 .testimonial-author img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 1rem;
   border: 2px solid var(--ice-blue);
   box-shadow: 0 0 10px rgba(174, 228, 255, 0.3);
 }
@@ -72,9 +114,52 @@
   pointer-events: none;
 }
 
+.frost-mist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, rgba(174, 228, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.cta-container {
+  margin-top: 3rem;
+}
+
+.frost-button {
+  background-color: transparent;
+  color: var(--ice-blue);
+  border: 2px solid var(--ice-blue);
+  padding: 0.8rem 2rem;
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.frost-button:hover {
+  background-color: var(--ice-blue-transparent);
+  box-shadow: 0 0 20px rgba(174, 228, 255, 0.7);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
   }
 }
 
