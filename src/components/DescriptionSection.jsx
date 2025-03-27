@@ -1,6 +1,6 @@
 import "../styles/components/DescriptionSection.css";
 import Skull from "../assets/photos/skull.png";
-import VanillaHand from "../assets/photos/vanillahand.png";
+import VanillaHand from "../assets/photos/table.png";
 
 function DescriptionSection() {
   return (

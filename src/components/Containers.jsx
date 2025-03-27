@@ -54,7 +54,7 @@ function Containers() {
         onScroll={handleScroll}
       >
         <div className="scrolling-content">
-          {images.concat(images).map((image, index) => (
+          {[...images, ...images].map((image, index) => ( // Duplicate images for seamless scrolling
             <div key={index} className="image-container">
               <img src={image} alt={`Hand ${index + 1}`} />
             </div>

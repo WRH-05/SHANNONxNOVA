@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Increased font size for the title */
   margin-bottom: 2rem;
   color: var(--dark);
   text-transform: uppercase;
@@ -16,9 +16,9 @@
 .scrolling-container {
   overflow: hidden;
   position: relative;
-  width: 80%; /* Reduce width to bring cut-off lines closer to the middle */
+  width: 80%; /* Keep the width as is */
   margin: 0 auto; /* Center the container */
-  height: 300px; /* Adjust height to bring containers closer to the middle */
+  height: 450px; /* Keep the height as is */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,8 +34,8 @@
 
 .image-container {
   flex: 0 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 300px; /* Keep the width as is */
+  height: 400px; /* Keep the height as is */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
