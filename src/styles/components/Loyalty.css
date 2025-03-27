@@ -3,7 +3,7 @@
   background-color: #1c1c1e; /* Updated background color */
   background-size: cover;
   background-position: center;
-  padding: 10rem 2rem; /* Increased top and bottom padding */
+  padding: 0rem 2rem; /* Reduced top and bottom padding */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,29 +12,32 @@
 
 .loyalty-content {
   display: flex;
-  align-items: flex-end; /* Align content to the bottom */
-  gap: 3rem;
+  align-items: center; /* Center-align content vertically */
+  gap: 2rem; /* Reduced gap */
   max-width: 1200px;
   width: 100%;
 }
 
 .loyalty-image img {
-  max-width: 350px;
+  max-width: 700px; /* Keep the larger size */
   border-radius: 0; /* Removed border */
   box-shadow: none; /* Removed shadow */
-  align-self: flex-end; /* Ensure the image aligns with the bottom of the section */
+  transform: translateY(8px); /* Lower the image */
 }
 
 .loyalty-text {
   flex: 1;
-  text-align: left;
+  text-align: center; /* Center-align text */
 }
 
 .loyalty-text p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
+  font-size: 1.5rem; /* Slightly smaller font size */
+  line-height: 1.6; /* Adjusted line height */
+  margin-bottom: 2rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 800px; /* Restrict text width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .register-button {

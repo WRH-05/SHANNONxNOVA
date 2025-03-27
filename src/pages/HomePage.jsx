@@ -3,7 +3,8 @@ import TransitionBand from "../components/TransitionBand";
 import DescriptionSection from "../components/DescriptionSection";
 import Containers from "../components/Containers"; 
 import Menu from "../components/menu"; 
-import Loyalty from "../components/Loyalty"; // Import Loyalty component
+import Loyalty from "../components/Loyalty"; 
+import Testimonials from "../components/Testimonials"; // Import Testimonials component
 
 function HomePage() {
   const scrollToMenu = () => {
@@ -24,26 +25,14 @@ function HomePage() {
           <button className="frost-button" onClick={scrollToMenu}>Taste the Chill</button>
         </div>
         <div className="frost-mist"></div>
-        <div className="icicles">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="icicle"
-              style={{
-                left: `${i * 5 + Math.random() * 5}%`,
-                height: `${30 + Math.random() * 70}px`,
-                animationDelay: `${Math.random() * 2}s`,
-              }}
-            />
-          ))}
-        </div>
       </section>
 
       <TransitionBand />
       <DescriptionSection />
       <Containers />
       <Menu id="menu-section" />
-      <Loyalty /> {/* Add Loyalty section */}
+      <Loyalty />
+      <Testimonials /> {/* Add Testimonials section */}
     </div>
   );
 }
