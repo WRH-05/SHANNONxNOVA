@@ -1,0 +1,18 @@
+.flavors-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.flavor-image {
+    width: 30%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flavor-image:hover {
+    transform: scale(1.05);
+}
