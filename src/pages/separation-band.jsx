@@ -1,44 +1,60 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './separation-band.css';
 
 const TransitionBand = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [visibleIndexes, setVisibleIndexes] = useState([]);
+  const imageRefs = useRef([]);
+  const randomImages = useRef([]);
 
   const totalImages = 8;
 
-  const randomImages = useMemo(() => {
+  // Generate random images only once
+  if (randomImages.current.length === 0) {
     const images = [
-      '/assets/photos/oblivian.png',
-      '/assets/photos/pinkhand.png',
-      '/assets/photos/purplehand.png',
-      '/assets/photos/brownhand.png'
+      require('../assets/photos/skull.png'),
+      require('../assets/photos/pinkhand.png'),
+      require('../assets/photos/purplehand.png'),
+      require('../assets/photos/brownhand.png'),
     ];
-    const arr = [];
     for (let i = 0; i < totalImages; i++) {
       const randIndex = Math.floor(Math.random() * images.length);
-      arr.push(images[randIndex]);
+      randomImages.current.push(images[randIndex]);
     }
-    return arr;
-  }, [totalImages]);
+  }
 
-  const imagePositions = useMemo(() => {
-    return new Array(totalImages).fill(null).map(() => ({
-      left: Math.random() * 90,
-      top: Math.random() * 80,
-    }));
-  }, [totalImages]);
+  const fixedPositions = [
+    { left: 5, top: 10 },
+    { left: 25, top: 20 },
+    { left: 50, top: 5 },
+    { left: 75, top: 15 },
+    { left: 10, top: 60 },
+    { left: 35, top: 70 },
+    { left: 60, top: 50 },
+    { left: 85, top: 65 },
+  ];
 
-  const maxScroll = 400;
-  const scale = Math.max(1 - scrollY / maxScroll, 0);
-  const opacity = Math.max(1 - scrollY / maxScroll, 0);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => parseInt(entry.target.dataset.index, 10));
+
+        setVisibleIndexes(visible); // Directly set visible indexes
+      },
+      { threshold: 0.1 } // Lower threshold for better visibility detection
+    );
+
+    imageRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      imageRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className="transition-band">
@@ -48,20 +64,24 @@ const TransitionBand = () => {
         <p>Taste the icy grip of perfection</p>
       </div>
 
-      {randomImages.map((src, index) => {
-        const { left, top } = imagePositions[index];
+      {randomImages.current.map((src, index) => {
+        const { left, top } = fixedPositions[index];
+        const isVisible = visibleIndexes.includes(index);
+        const randomSize = 60 + Math.random() * 40; // Random size between 60px and 100px
         return (
           <img
             key={index}
             src={src}
             alt="Skull Ice Cream"
-            className="band-icecream"
+            className={`band-icecream ${isVisible ? 'visible' : ''}`}
             style={{
               left: `${left}%`,
               top: `${top}%`,
-              transform: `scale(${scale})`,
-              opacity,
+              width: `${randomSize}px`,
+              height: `${randomSize}px`,
             }}
+            data-index={index}
+            ref={(el) => (imageRefs.current[index] = el)}
           />
         );
       })}

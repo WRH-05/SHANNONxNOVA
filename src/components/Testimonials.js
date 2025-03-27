@@ -1,25 +1,25 @@
-import "./Testimonials.css"
-import PlaceholderImage from "./PlaceholderImage"
+import "./Testimonials.css";
+import PlaceholderImage from "./PlaceholderImage";
+
+export const testimonials = [
+  {
+    id: 1,
+    text: "The Frostmourne Swirl froze my heart... and I loved it.",
+    author: "Former Paladin",
+  },
+  {
+    id: 2,
+    text: "I thought I knew ice cream, but the Lich King showed me true power.",
+    author: "Converted Mage",
+  },
+  {
+    id: 3,
+    text: "One bite, and I pledged my eternal loyalty to the Frozen Throne.",
+    author: "Willing Subject",
+  },
+];
 
 function Testimonials() {
-  const testimonials = [
-    {
-      id: 1,
-      text: "The Frostmourne Swirl froze my heart... and I loved it.",
-      author: "Former Paladin",
-    },
-    {
-      id: 2,
-      text: "I thought I knew ice cream, but the Lich King showed me true power.",
-      author: "Converted Mage",
-    },
-    {
-      id: 3,
-      text: "One bite, and I pledged my eternal loyalty to the Frozen Throne.",
-      author: "Willing Subject",
-    },
-  ]
-
   return (
     <section className="testimonials-section">
       <div className="container">
@@ -46,8 +46,8 @@ function Testimonials() {
 
       <div className="frost-mist"></div>
     </section>
-  )
+  );
 }
 
-export default Testimonials
+export default Testimonials;
 

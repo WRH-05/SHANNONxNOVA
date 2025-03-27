@@ -32,10 +32,17 @@
 
 .band-icecream {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  transition: transform 0.2s, opacity 0.2s;
+  width: 70px; /* Base width */
+  height: 70px; /* Base height */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.8); /* Default size when not visible */
+  opacity: 0.5; /* Default opacity when not visible */
   z-index: 1;
+}
+
+.band-icecream.visible {
+  transform: scale(1.3); /* Enlarged size when visible */
+  opacity: 1; /* Full opacity when visible */
+  filter: brightness(1.2) saturate(1.1); /* Highlight effect */
+  box-shadow: 0 0 15px rgba(174, 228, 255, 0.5); /* Glow effect */
 }
