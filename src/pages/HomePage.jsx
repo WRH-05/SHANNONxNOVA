@@ -3,6 +3,7 @@ import TransitionBand from "../components/TransitionBand";
 import DescriptionSection from "../components/DescriptionSection";
 import Containers from "../components/Containers"; 
 import Menu from "../components/menu"; 
+import Loyalty from "../components/Loyalty"; // Import Loyalty component
 
 function HomePage() {
   const scrollToMenu = () => {
@@ -42,6 +43,7 @@ function HomePage() {
       <DescriptionSection />
       <Containers />
       <Menu id="menu-section" />
+      <Loyalty /> {/* Add Loyalty section */}
     </div>
   );
 }
