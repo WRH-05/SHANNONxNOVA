@@ -1,6 +1,7 @@
-import "../styles/pages/HomePage.css"; // Corrected path
+import "../styles/pages/HomePage.css"; 
 import TransitionBand from "../components/TransitionBand";
 import DescriptionSection from "../components/DescriptionSection";
+import Containers from "../components/Containers"; // Ensure this import exists
 
 function HomePage() {
   return (
@@ -29,6 +30,7 @@ function HomePage() {
 
       <TransitionBand />
       <DescriptionSection />
+      <Containers /> {/* Ensure this component is rendered */}
     </div>
   );
 }
