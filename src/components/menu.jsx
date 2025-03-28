@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/components/menu.css'; // Corrected path to the CSS file
+import '../styles/components/Menu.css'; // Corrected path to the CSS file
 import SorbetImage from '../assets/photos/sorbet.png'; // Import the main image
 import PurpleSkullImage from '../assets/photos/purpleskull.png'; // Import the overlay image
 
